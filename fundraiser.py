@@ -122,25 +122,34 @@ if st.button("Submit my investment"):
         st.success("Your vote has been recorded (or updated if you voted before). ✅")
 
 # ----------------------------
-# TEACHER VIEW
+# TEACHER VIEW (PASSWORD PROTECTED)
 # ----------------------------
 
 st.markdown("---")
 st.header("Teacher View")
 
-# Clear all data button
-if st.button("🗑️ Clear ALL data (Teacher Only)"):
-    votes_df = pd.DataFrame(columns=["name"] + TEAMS)
-    votes_df.to_csv(DATA_FILE, index=False)
-    st.success("All data has been cleared successfully!")
+password = st.sidebar.text_input("Teacher password", type="password")
 
-if st.checkbox("Show aggregated results"):
-    if votes_df.empty:
-        st.info("No votes yet.")
-    else:
-        totals = votes_df[TEAMS].sum().sort_values(ascending=False)
-        st.subheader("Total credits per team")
-        st.bar_chart(totals)
-        st.write(totals.to_frame("Total Credits"))
+if password == TEACHER_PASSWORD:
+
+    st.success("Teacher mode activated.")
+
+    # Clear all data button
+    if st.button("🗑️ Clear ALL data (Teacher Only)"):
+        votes_df = pd.DataFrame(columns=["name"] + TEAMS)
+        votes_df.to_csv(DATA_FILE, index=False)
+        st.success("All data has been cleared successfully!")
+
+    if st.checkbox("Show aggregated results"):
+        if votes_df.empty:
+            st.info("No votes yet.")
+        else:
+            totals = votes_df[TEAMS].sum().sort_values(ascending=False)
+            st.subheader("Total credits per team")
+            st.bar_chart(totals)
+            st.write(totals.to_frame("Total Credits"))
+
+elif password != "":
+    st.error("Incorrect password.")
 
 # streamlit run fundraiser.py
