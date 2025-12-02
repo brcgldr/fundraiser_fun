@@ -53,6 +53,9 @@ STUDENT_EMAILS = [
     "ahmet.yetisir@tha.de",
 ]
 
+# Teacher password (protect teacher view)
+TEACHER_PASSWORD = "dbm2025" 
+
 # ----------------------------
 # LOAD / INIT DATA
 # ----------------------------
