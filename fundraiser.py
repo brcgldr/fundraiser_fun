@@ -70,7 +70,7 @@ else:
 # APP LAYOUT
 # ----------------------------
 
-st.title("Fundraiser Game – Invest in the Teams 💰")
+st.title("Invest in the Teams 💰")
 st.write(
     f"You have a total of **{TOTAL_CREDITS} credits**. "
     "Distribute them among the 12 teams."
