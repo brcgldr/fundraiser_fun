@@ -129,16 +129,16 @@ if st.button("Submit my investment"):
 # ----------------------------
 
 st.markdown("---")
-st.header("Teacher View")
+st.header("Professor View")
 
-password = st.sidebar.text_input("Teacher password", type="password")
+password = st.sidebar.text_input("Password", type="password")
 
 if password == TEACHER_PASSWORD:
 
-    st.success("Teacher mode activated.")
+    st.success("Professor mode is activated.")
 
     # Clear all data button
-    if st.button("🗑️ Clear ALL data (Teacher Only)"):
+    if st.button("🗑️ Clear ALL data (Professor Only)"):
         votes_df = pd.DataFrame(columns=["name"] + TEAMS)
         votes_df.to_csv(DATA_FILE, index=False)
         st.success("All data has been cleared successfully!")
