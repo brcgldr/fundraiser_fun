@@ -152,6 +152,16 @@ if password == TEACHER_PASSWORD:
             st.bar_chart(totals)
             st.write(totals.to_frame("Total Credits"))
 
+    # 👉 Download votes.csv button
+    if not votes_df.empty:
+        csv_data = votes_df.to_csv(index=False).encode("utf-8")
+        st.download_button(
+            label="📥 Download votes.csv",
+            data=csv_data,
+            file_name="votes.csv",
+            mime="text/csv",
+        )
+
 elif password != "":
     st.error("Incorrect password.")
 
