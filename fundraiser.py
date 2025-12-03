@@ -131,7 +131,7 @@ if st.button("Submit my investment"):
 st.markdown("---")
 st.header("Professor View")
 
-password = st.sidebar.text_input("Password", type="password")
+password = st.sidebar.text_input("Give me the Password", type="password")
 
 if password == TEACHER_PASSWORD:
 
