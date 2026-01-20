@@ -11,11 +11,8 @@ TEAMS = [
     "Team 1",
     "Team 2",
     "Team 3",
-    "Team 4",
-    "Team 5",
     "Team 6",
     "Team 7",
-    "Team 8",
     "Team 9",
     "Team 10",
     "Team 11",
@@ -29,20 +26,14 @@ STUDENT_EMAILS = [
     "guelluehan.bakir1@tha.de",
     "leon.balliet@tha.de",
     "tuba.baslik@tha.de",
-    "chris.bauer@tha.de",
     "lucy.beck1@tha.de",
     "kevin.behner@tha.de",
     "berke.bozdogan@tha.de",
     "yunus.emre.cevik1@tha.de",
-    "helgi.eggerz@tha.de",
     "florian.fischer2@tha.de",
-    "jan.hartisch@tha.de",
-    "mario.hartl@tha.de",
-    "lenny.heinrich@tha.de",
     "elias.hektor@tha.de",
     "philipp.meyer2@tha.de",
     "fabio.reinkensmeier@tha.de",
-    "maximilian.sager@tha.de",
     "laura.slusalek1@tha.de",
     "elena-camelia.spiridon@tha.de",
     "derya.suetcue@tha.de",
@@ -54,7 +45,7 @@ STUDENT_EMAILS = [
 ]
 
 # Teacher password (protect teacher view)
-TEACHER_PASSWORD = "dbm2025" 
+TEACHER_PASSWORD = "2dbm2025" 
 
 # ----------------------------
 # LOAD / INIT DATA
